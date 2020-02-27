@@ -1,0 +1,18 @@
+.haztupedido a {
+	border-radius: 10px;
+	box-shadow: 2px 2px 10px #ccc;
+	font-size: 1.2rem;
+	font-weight: bold;
+	padding: 10px 4rem;
+	text-align: center;
+	display: inline-block;
+	margin-bottom: 25px;
+	transition: all ease 0.4s;
+	text-decoration: none !important;
+}
+
+.haztupedido a i{
+	margin-right: 10px;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
