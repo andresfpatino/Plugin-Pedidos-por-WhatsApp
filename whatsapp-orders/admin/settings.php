@@ -31,20 +31,22 @@ function settings(){ ?>
 
 				<tr valign="top">
 					<th scope="row">Texto del botón</th>
-					<td><input required size="80" type="text" name="label" value="<?php echo esc_attr(get_option('label')); ?>" placeholder="Ingrese el texto"></td>
+					<td><input required size="40" type="text" name="label" value="<?php echo esc_attr(get_option('label')); ?>" placeholder="Ingrese el texto"></td>
 				</tr>
 				<tr valign="top">
 					<th scope="row">Número de teléfono</th>
-					<td><input required size="80" type="text" name="number_link" value="<?php echo esc_attr(get_option('number_link')); ?>" placeholder="Ingrese el número con el indicativo Ej: 570000000000"></td>
+					<td><input required size="40" type="text" name="number_link" value="<?php echo esc_attr(get_option('number_link')); ?>" placeholder="Ingrese el número con el indicativo Ej: 570000000000"></td>
 				</tr>
 				<tr valign="top">
 					<th scope="row">Background botón</th>
-					<td><input required size="80" type="text" name="background_button" value="<?php echo esc_attr(get_option('background_button')); ?>" placeholder="#25d366"></td>
+					<td><input class="jscolor {hash:true}" required size="40" name="background_button" value="<?php echo esc_attr(get_option('background_button')); ?>"></td>
 				</tr>
+				
 				<tr valign="top">
 					<th scope="row">Color del texto</th>
-					<td><input required size="80" type="text" name="color_label" value="<?php echo esc_attr(get_option('color_label')); ?>" placeholder="#000000"></td>
+					<td><input class="jscolor {hash:true}" required size="40" name="color_label" value="<?php echo esc_attr(get_option('color_label')); ?>"></td>
 				</tr>
+
 			</table>
 			
 			<?php submit_button(); ?>	

@@ -28,7 +28,8 @@ function plugin_scripts() {
 add_action('wp_enqueue_scripts', 'plugin_scripts');
 
 function admin_scripts() {
-    wp_enqueue_style('font-awesome', plugin_dir_url( __FILE__ ).'includes/font-awesome/css/font-awesome.min.css', '', '4.7.0');
+    wp_enqueue_style('font-awesome', plugin_dir_url( __FILE__ ).'includes/lib/font-awesome/css/font-awesome.min.css', '', '4.7.0');
+    wp_enqueue_script('jscolor', plugin_dir_url( __FILE__ ).'includes/lib/jscolor/jscolor.js', array('jquery'), '1.0', true);
 }
 add_action('admin_enqueue_scripts', 'admin_scripts');
 
