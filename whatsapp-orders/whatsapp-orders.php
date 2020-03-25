@@ -27,6 +27,12 @@ function plugin_scripts() {
 }
 add_action('wp_enqueue_scripts', 'plugin_scripts');
 
+function admin_scripts() {
+    wp_enqueue_style('font-awesome', plugin_dir_url( __FILE__ ).'includes/font-awesome/css/font-awesome.min.css', '', '4.7.0');
+}
+add_action('admin_enqueue_scripts', 'admin_scripts');
+
+
 // Redirige a la página de opciones, luego de activar el plugin
 function activation_redirect( $plugin ) {
     if( $plugin == plugin_basename( __FILE__ ) ) {
