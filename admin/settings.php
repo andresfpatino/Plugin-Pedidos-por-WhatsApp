@@ -11,7 +11,7 @@ function settings_whatsapp_orders(){
 /* Pagina settings */
 function settings(){ ?>
 	<div class="wrap">	
-		<h1>Configuracion | Pedidos por WhatsApp</h1>
+		<h1>Configuracion Pedidos por WhatsApp</h1>
 		<hr>
 		<div class="notice notice-info is-dismissible"> 
 			<p><strong>Plugin activado.</strong> Por favor configura los siguientes parametros:</p>
@@ -31,20 +31,20 @@ function settings(){ ?>
 
 				<tr valign="top">
 					<th scope="row">Texto del botón</th>
-					<td><input required size="40" type="text" name="label" value="<?php echo esc_attr(get_option('label')); ?>" placeholder="Ingrese el texto"></td>
+					<td><input required size="60" type="text" name="label" value="<?php echo esc_attr(get_option('label')); ?>" placeholder="Ingrese el texto"></td>
 				</tr>
 				<tr valign="top">
 					<th scope="row">Número de teléfono</th>
-					<td><input required size="40" type="text" name="number_link" value="<?php echo esc_attr(get_option('number_link')); ?>" placeholder="Ingrese el número con el indicativo Ej: 570000000000"></td>
+					<td><input required size="60" type="text" name="number_link" value="<?php echo esc_attr(get_option('number_link')); ?>" placeholder="Ingrese el número con el indicativo Ej: 570000000000"></td>
 				</tr>
 				<tr valign="top">
 					<th scope="row">Background botón</th>
-					<td><input class="jscolor {hash:true}" required size="40" name="background_button" value="<?php echo esc_attr(get_option('background_button')); ?>"></td>
+					<td><input class="jscolor {hash:true}" type="text" required size="60" name="background_button" value="<?php echo esc_attr(get_option('background_button')); ?>"></td>
 				</tr>
 				
 				<tr valign="top">
 					<th scope="row">Color del texto</th>
-					<td><input class="jscolor {hash:true}" required size="40" name="color_label" value="<?php echo esc_attr(get_option('color_label')); ?>"></td>
+					<td><input class="jscolor {hash:true}" type="text" required size="60" name="color_label" value="<?php echo esc_attr(get_option('color_label')); ?>"></td>
 				</tr>
 
 			</table>

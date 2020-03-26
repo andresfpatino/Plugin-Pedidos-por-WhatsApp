@@ -2,8 +2,8 @@
 /**
  * Plugin Name: Pedidos por WhatsApp 
  * Plugin URI:  https://ecore.com.co
- * Description: Cambia todos los productos a un botón "Pedidos por Whatsapp" en vez de agregar al carrito de compras.
- * Version:     1.0
+ * Description: Cambia el comportamiento de añadir al carrito, con un botón que permite envia un mensaje a Whatsapp en los productos de Woocommerce
+ * Version:     1.0.1
  * Author:      Andrés Felipe Patiño
  * Author URI:  https://ecore.com.co
  * License:     GPL2
@@ -21,12 +21,14 @@ include(RUTA.'/includes/opciones.php');
 require_once(RUTA.'/front-button.php');
 
 
-// Registra cargar de scripts en el admin
+// Registra carga de scripts en front del sitio
 function plugin_scripts() {
     wp_enqueue_style('pedido-whatsapp', plugin_dir_url( __FILE__ ).'includes/css/pedido-whatsapp.css', '', '1.0');
+    wp_enqueue_style('font-awesome-pedidos-whatsapp', plugin_dir_url( __FILE__ ).'includes/lib/font-awesome/css/font-awesome.min.css', '', '4.7.0');
 }
 add_action('wp_enqueue_scripts', 'plugin_scripts');
 
+// Registra carga de scripts en el admin
 function admin_scripts() {
     wp_enqueue_style('font-awesome', plugin_dir_url( __FILE__ ).'includes/lib/font-awesome/css/font-awesome.min.css', '', '4.7.0');
     wp_enqueue_script('jscolor', plugin_dir_url( __FILE__ ).'includes/lib/jscolor/jscolor.js', array('jquery'), '1.0', true);
